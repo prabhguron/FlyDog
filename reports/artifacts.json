@@ -1,0 +1,27 @@
+{
+  "detector": {
+    "path": "runs/detector/weights/best.pt",
+    "sha256": "604a74b778194d07936cc6c4e73de84fe7366b67e79d66feb0eabd781372df1c",
+    "bytes": 5423898
+  },
+  "fly_policy": {
+    "path": "runs/nav_fly_42_long/best_model.zip",
+    "sha256": "d8eda0edff5384ce12bd84c077f767679d0ec80d92485e4ea15c2422ff7e1ac0",
+    "bytes": 630518
+  },
+  "mlp_policy": {
+    "path": "runs/nav_mlp_42_long/best_model.zip",
+    "sha256": "e47b9bb8388261785597c8ac0e6b7af25d12f169057e35a68dacbc51bd54cb7e",
+    "bytes": 39131
+  },
+  "shuffled_policy": {
+    "path": "runs/nav_shuffled_42/best_model.zip",
+    "sha256": "07fc9e03296a0185812ced20d6cd2100019409066a12ca6cc900ba3a74cd3666",
+    "bytes": 630478
+  },
+  "graph": {
+    "path": "data/connectome/graph.npz",
+    "sha256": "28ab3d79b99db6f51ee74fb4bf1e0aea57179c72171598c937d3379e7a301875",
+    "bytes": 7368
+  }
+}

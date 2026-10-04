@@ -1,0 +1,29 @@
+{
+  "release": 783,
+  "nodes": 128,
+  "directed_edges": 1271,
+  "synapses_before_normalization": 35046,
+  "selection": "Top weighted-degree cells in FB/EB/PB/NO; induced graph across all neuropils",
+  "orientation": "weights[post, pre]",
+  "normalization": "absolute incoming row sum",
+  "transmitter_assumption": "GABA/GLUT negative; others positive; receptor effects not modeled",
+  "transmitter_edge_rows": {
+    "GLUT": 471,
+    "GABA": 411,
+    "SER": 49,
+    "ACH": 658,
+    "DA": 72,
+    "OCT": 10
+  },
+  "sources": {
+    "connections.csv.gz": {
+      "url": "https://storage.googleapis.com/flywire-data/codex/data/fafb/783/connections.csv.gz",
+      "sha256": "d49dd692e59e153aa3c83f5257bfc0eff51247b86d7bb183386c6d1622c70fc9"
+    },
+    "classification.csv.gz": {
+      "url": "https://storage.googleapis.com/flywire-data/codex/data/fafb/783/classification.csv.gz",
+      "sha256": "e946b552f4056dfc977707be0674609832c3f64332a22d69dc0d9615e7aae663"
+    }
+  },
+  "whole_brain": false
+}

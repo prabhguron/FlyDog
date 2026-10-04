@@ -30,7 +30,10 @@ def main():
     p.add_argument('--steps',type=int,default=100000);p.add_argument('--seed',type=int,default=42)
     p.add_argument('--resume');p.add_argument('--name');p.add_argument('--eval-only');args=p.parse_args()
     torch.set_num_threads(2)
-    out=RUNS/(args.name or f'nav_{args.mode}_{args.seed}');out.mkdir(parents=True,exist_ok=True)
+    out=RUNS/(args.name or f'nav_{args.mode}_{args.seed}')
+    if (out/'config.json').exists() and not args.eval_only:
+        raise FileExistsError(f'{out} already contains a run; choose a new --name')
+    out.mkdir(parents=True,exist_ok=True)
     if args.eval_only:
         model=PPO.load(args.eval_only,device='cpu')
         (out/'evaluation.json').write_text(json.dumps(evaluate(model),indent=2));return

@@ -7,6 +7,10 @@ A local research repository for a future Freenove robot-dog interface. It trains
 
 This is **not a complete fly-brain emulation, a learned biological fruit preference, or a reproduction of FlyGM**. The initial controller has 128 actual FlyWire neurons. Its input encoding, channel dynamics, and action decoding are engineered and trained. It does not control dog joints or send hardware commands.
 
+## Completed local run
+
+See [measured results](reports/RESULTS.md), [checkpoint manifest](reports/artifacts.json), and [navigation comparison](reports/navigation.png). Trained checkpoints remain under `runs/`; the Git repository tracks source and reports, not large weights or photos.
+
 ## Setup
 
 Python 3.12 was used on an Apple M2 with 16 GiB RAM. The current session exposes CPU only.
@@ -32,7 +36,7 @@ python scripts/train_navigation.py --mode mlp --steps 1000000
 python scripts/train_navigation.py --mode shuffled --steps 1000000
 ```
 
-Detector runs automatically choose a new output directory when an existing name is occupied. Navigation output names must be unique when preserving experiments; use `--name my_experiment`. Navigation `--resume PATH` loads a PPO checkpoint and trains for the specified number of **additional** steps:
+Detector runs automatically choose a new output directory when an existing name is occupied. Navigation output names must be unique; existing runs are protected from overwrite; use `--name my_experiment`. Navigation `--resume PATH` loads a PPO checkpoint and trains for the specified number of **additional** steps:
 
 ```bash
 python scripts/train_navigation.py --mode fly --steps 900000 \

@@ -11,3 +11,5 @@ dependencies = ["torch", "torchvision", "stable-baselines3", "ultralytics", "pan
 where = ["src"]
 [tool.pytest.ini_options]
 pythonpath = ["src"]
+[tool.setuptools.package-data]
+flycan = ["web/*.html", "web/*.js", "web/*.css"]

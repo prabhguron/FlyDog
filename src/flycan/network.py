@@ -24,7 +24,13 @@ class FlyFeatures(BaseFeaturesExtractor):
         self.encode=nn.Linear(observation_space.shape[0],self.nodes*channels)
         self.update=nn.Linear(channels,channels)
         self.readout=nn.Sequential(nn.Flatten(),nn.Linear(self.nodes*channels,64),nn.Tanh())
-    def forward(self,obs):
+    def node_states(self,obs):
+        """Encoder state followed by each actual graph-update state (B,N,C)."""
         h=torch.tanh(self.encode(obs)).reshape(-1,self.nodes,self.channels)
-        for _ in range(3):h=torch.tanh(self.update(torch.matmul(self.w,h)))
-        return self.readout(h)
+        states=[h]
+        for _ in range(3):
+            h=torch.tanh(self.update(torch.matmul(self.w,h)))
+            states.append(h)
+        return states
+    def forward(self,obs):
+        return self.readout(self.node_states(obs)[-1])

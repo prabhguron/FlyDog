@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FlyCan · Neural lab</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">FlyCan<span>NEURAL LAB</span></a>
+      <div class="connection">
+        <i id="connectionDot"></i
+        ><span id="connectionText">Connecting to model…</span>
+      </div>
+    </header>
+    <main>
+      <div class="intro">
+        <div>
+          <div class="eyebrow">FROM PERCEPTION TO MOVEMENT</div>
+          <h1>See the circuit respond.</h1>
+          <p>
+            A can becomes a signal. The fly circuit turns it into an action.
+          </p>
+        </div>
+        <div class="modeltag">
+          <strong>128</strong
+          ><span>modeled neurons<br />FlyWire FAFB · v783</span>
+        </div>
+      </div>
+      <div id="error" role="alert" hidden></div>
+      <div class="workspace">
+        <section class="brain-panel">
+          <div class="panel-head">
+            <div>
+              <h2>Neural activity</h2>
+              <span class="subtle"
+                >Actual model states · anatomical soma positions</span
+              >
+            </div>
+            <span id="sourceBadge" class="badge">DEMO INPUT</span>
+          </div>
+          <div class="brain-controls">
+            <label
+              >Show
+              <select id="signalMode">
+                <option value="response">Can-linked change</option>
+                <option value="activity">Total activation</option>
+              </select></label
+            ><label
+              >Stage
+              <select id="stage">
+                <option value="0">Sensory encoder</option>
+                <option value="1">Graph update 1</option>
+                <option value="2">Graph update 2</option>
+                <option value="3" selected>Graph update 3</option>
+              </select></label
+            ><label class="check"
+              ><input id="edges" type="checkbox" checked /> Connections</label
+            >
+          </div>
+          <div class="brain-stage">
+            <canvas
+              id="brain"
+              aria-label="Interactive 3D brain showing 128 modeled neurons and passive anatomical context. Drag to rotate; select a neuron for its measured state."
+              role="img"
+            ></canvas>
+            <div class="brain-hint">DRAG TO ROTATE · SCROLL TO ZOOM</div>
+            <button id="resetView" class="small" type="button">
+              Reset view
+            </button>
+            <div class="brain-readout">
+              <span id="responseValue">0.000</span
+              ><small>mean can-linked response</small>
+            </div>
+          </div>
+          <div class="legend">
+            <span><i class="teal"></i><span id="positiveLegend">Increased activation</span></span
+            ><span id="negativeLegend"><i class="amber"></i>Decreased activation</span
+            ><span><i class="gray"></i>Unmodeled context</span>
+          </div>
+          <div class="neuron-detail">
+            <label for="neuronSelect">Inspect neuron</label
+            ><select id="neuronSelect">
+              <option value="">Select a point or neuron</option>
+            </select>
+            <div id="neuronInfo">
+              Brightness shows the measured change from a no-can input. No
+              simulated spikes.
+            </div>
+          </div>
+        </section>
+        <aside>
+          <section class="input-panel">
+            <div class="panel-head">
+              <h2>01 <span>Scene input</span></h2>
+              <span id="detectionStatus" class="badge">NO CAN</span>
+            </div>
+            <div class="tabs" role="group" aria-label="Input source">
+              <button id="demoTab" class="active" aria-pressed="true">
+                Stimulus lab</button
+              ><button id="photoTab" aria-pressed="false">Photo</button
+              ><button id="cameraTab" aria-pressed="false">Camera</button>
+            </div>
+            <div class="sensor-preview">
+              <canvas
+                id="scene"
+                role="img"
+                aria-label="Can stimulus or image with detector bounding boxes"
+              ></canvas
+              ><video id="video" muted playsinline hidden></video
+              ><span id="previewLabel"
+                >Synthetic stimulus · bypasses detector</span
+              >
+            </div>
+            <div id="demoControls">
+              <label class="toggle"
+                ><span>Can visible</span
+                ><input type="checkbox" id="visible" checked /></label
+              ><label class="range-label" for="bearing"
+                >Can position <output id="bearingValue">Center</output></label
+              ><input
+                id="bearing"
+                type="range"
+                min="-0.85"
+                max="0.85"
+                step="0.01"
+                value="0"
+              />
+              <div class="ends"><span>Left</span><span>Right</span></div>
+              <label class="range-label" for="width"
+                >Can size in view <output id="widthValue">4%</output></label
+              ><input
+                id="width"
+                type="range"
+                min="0.015"
+                max="0.18"
+                step="0.005"
+                value="0.04"
+              />
+            </div>
+            <div id="photoControls" hidden>
+              <label class="file-button"
+                >Choose a photo<input
+                  id="photoFile"
+                  type="file"
+                  accept="image/*" /></label
+              ><button id="sampleButton">Try a dataset photo</button>
+              <p class="subtle">
+                Uses the trained can detector. Photos are snapshots; dog motion
+                stays disabled.
+              </p>
+            </div>
+            <div id="feedbackPanel" hidden>
+              <div class="feedback-title">Teach the detector</div>
+              <p class="subtle">
+                Draw a box around every can, or mark the image as having no
+                cans. This saves corrections for retraining.
+              </p>
+              <div class="feedback-buttons">
+                <button id="drawFeedback">Correct boxes</button
+                ><button id="negativeFeedback">No cans here</button
+                ><button id="saveFeedback" hidden>Save corrected boxes</button
+                ><button id="cancelFeedback" hidden>Cancel</button>
+              </div>
+              <span
+                id="feedbackStatus"
+                class="subtle"
+                aria-live="polite"
+              ></span>
+            </div>
+            <div id="cameraControls" hidden>
+              <button id="startCamera" class="primary">Start camera</button
+              ><button id="stopCamera">Stop camera</button>
+              <p class="subtle">
+                Camera frames stay on this computer. Range below is simulated
+                until a distance sensor is connected.
+              </p>
+            </div>
+            <label class="range-label" for="frontRange"
+              >Simulated obstacle range
+              <output id="rangeValue">1.50 m</output></label
+            ><input
+              id="frontRange"
+              type="range"
+              min="0.05"
+              max="3"
+              step="0.05"
+              value="1.5"
+            />
+          </section>
+          <section class="action-panel">
+            <div class="panel-head">
+              <h2>02 <span>Movement output</span></h2>
+              <span class="badge">MOCK DRIVER</span>
+            </div>
+            <div class="decision">
+              <span id="actionText">—</span
+              ><small id="latency">Waiting for a stimulus</small>
+            </div>
+            <div
+              id="probabilities"
+              aria-label="Policy action probabilities"
+            ></div>
+            <div class="dog-area">
+              <canvas
+                id="dog"
+                aria-label="Top view of simulated dog movement; this is a mock driver, not physical robot motion"
+                role="img"
+              ></canvas>
+              <div>
+                <strong id="driverStatus">Disarmed</strong
+                ><span id="motionValues">0.00 m/s · 0.00 rad/s</span>
+              </div>
+            </div>
+            <div class="robot-buttons">
+              <button id="armButton" class="primary">
+                Enable simulated dog</button
+              ><button id="stopButton" class="stop">STOP</button>
+            </div>
+            <button id="clearStop" hidden>Clear stop latch</button>
+            <p class="subtle">
+              Your Freenove movement code plugs into the driver. A 500 ms
+              command timeout stops motion if updates end.
+            </p>
+          </section>
+        </aside>
+      </div>
+      <footer>
+        <span
+          >Camera → sensory encoder → FlyWire graph → action policy → dog
+          adapter</span
+        >
+        <p>
+          This is a 128-neuron connectome-constrained model, not a whole-brain
+          spiking simulation. Gray soma locations are anatomical context only.
+          Straight connections are graph edges, not neuron shapes.
+        </p>
+      </footer>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

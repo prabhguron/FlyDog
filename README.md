@@ -7,6 +7,20 @@ A local research repository for a future Freenove robot-dog interface. It trains
 
 This is **not a complete fly-brain emulation, a learned biological fruit preference, or a reproduction of FlyGM**. The initial controller has 128 actual FlyWire neurons. Its input encoding, channel dynamics, and action decoding are engineered and trained. It does not control dog joints or send hardware commands.
 
+## Live brain view and robot framework
+
+```bash
+source .venv/bin/activate
+python scripts/prepare_brain_view.py  # downloads anatomical soma positions once
+python scripts/brain_dashboard.py
+```
+
+Open http://127.0.0.1:8765. Toggle the can and move it in **Stimulus lab**, or use **Photo → Try a dataset photo** to run the trained detector. The camera option requests camera access only when you press Start camera. Inspect individual neurons, rotate the brain, or compare the four actual computation stages. Only the 128 model neurons light up; 6,500 gray somas are passive anatomical context.
+
+**Enable simulated dog** exercises the movement adapter. STOP latches and a 500 ms watchdog stops stale commands. No physical driver is enabled. Your upcoming movement code connects through [the Freenove adapter example](examples/freenove_adapter.py) and [the robot contract](docs/ROBOT_INTERFACE.md).
+
+**Correct boxes** and **No cans here** save reviewed detector feedback for later retraining. These controls do not instantly change weights. See [feedback training](docs/FEEDBACK_TRAINING.md) for the new-dataset export and fine-tuning commands. Built-in test photos are excluded from retraining.
+
 ## Completed local run
 
 See [measured results](reports/RESULTS.md), [checkpoint manifest](reports/artifacts.json), and [navigation comparison](reports/navigation.png). Trained checkpoints remain under `runs/`; the Git repository tracks source and reports, not large weights or photos.

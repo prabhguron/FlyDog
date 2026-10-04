@@ -1,4 +1,4 @@
-# FlyCan: train a connectome-constrained can-seeking controller
+# FlyDog: train a connectome-constrained can-seeking controller
 
 A local research repository for a future Freenove robot-dog interface. It trains two separate components:
 

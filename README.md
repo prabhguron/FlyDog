@@ -23,7 +23,7 @@ Open http://127.0.0.1:8765. Toggle the can and move it in **Stimulus lab**, or u
 
 ## Completed local run
 
-See [measured results](reports/RESULTS.md), [checkpoint manifest](reports/artifacts.json), and [navigation comparison](reports/navigation.png). Trained checkpoints remain under `runs/`; the Git repository tracks source and reports, not large weights or photos.
+See [measured results](reports/RESULTS.md), [checkpoint manifest](reports/artifacts.json), and [navigation comparison](reports/navigation.png). Trained checkpoints are included under `runs/`, along with evaluation results and the prepared graph and brain geometry in `data/connectome/`. Downloaded dataset photos, raw data, local feedback, caches, and the Python environment are excluded.
 
 ## Setup
 
@@ -81,7 +81,7 @@ Official source: https://github.com/pedropro/TACO
 
 The preparation script selects every image annotated with Food Can or Drink can and an equally sized random set of images without these labels. It uses the source's 640-pixel Flickr variant; normalized COCO boxes are converted to YOLO format. Invalid aspect ratios are rejected and recorded. Source batches are split approximately 70/15/15 before downloading, and cross-split exact duplicate hashes are checked. Batch grouping reduces leakage but cannot guarantee different scenes or photographers. Test images are never used for detector training or checkpoint selection.
 
-The image manifest retains each image's source metadata and failure reason. Raw photos, external model weights, large data, and runs are gitignored. The repository's MIT code license does not relicense TACO images, FlyWire data, or Ultralytics. TACO's downloaded annotation file has empty license metadata; consult original image terms before redistributing images. Ultralytics has its own AGPL/enterprise licensing terms.
+The image manifest retains each image's source metadata and failure reason. Raw photos, raw data, caches, and new runs are gitignored; the completed trained checkpoints and evaluation artifacts are explicitly included. The repository's MIT code license does not relicense TACO images, FlyWire data, or Ultralytics. TACO's downloaded annotation file has empty license metadata; consult original image terms before redistributing images. Ultralytics has its own AGPL/enterprise licensing terms.
 
 ## Scope of the navigation result
 
@@ -111,3 +111,7 @@ This prints an action proposal only. Left/right camera coordinates are converted
 - PPO implementation: https://github.com/DLR-RM/stable-baselines3
 - Detector framework: https://github.com/ultralytics/ultralytics
 - Freenove hardware software: https://github.com/Freenove/Freenove_Robot_Dog_Kit_for_Raspberry_Pi
+
+## Run the uploaded model without retraining
+
+After installing dependencies as described above, run `python scripts/brain_dashboard.py`. The trained detector, policy, and brain geometry are included. Upload your own photo or start the browser camera. The built-in dataset-photo button requires `python scripts/prepare_taco.py` first. Downloading data and retraining are optional for inference.

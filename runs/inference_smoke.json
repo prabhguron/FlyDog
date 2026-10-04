@@ -1,0 +1,11 @@
+{
+  "observation": [
+    1.0,
+    0.2340494841337204,
+    0.3787580132484436,
+    0.5
+  ],
+  "policy_action": "stop",
+  "guarded_proposal": "stop",
+  "hardware_command_sent": false
+}

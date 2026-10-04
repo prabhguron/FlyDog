@@ -1,0 +1,708 @@
+{
+  "episodes": 100,
+  "success_rate": 0.1,
+  "collision_rate": 0.32,
+  "mean_reward": -8.181346437845487,
+  "rollouts": [
+    {
+      "seed": 20000,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -13.722852450873154
+    },
+    {
+      "seed": 20001,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -3.049710562128986
+    },
+    {
+      "seed": 20002,
+      "success": false,
+      "collision": true,
+      "steps": 157,
+      "reward": -15.681379164047534
+    },
+    {
+      "seed": 20003,
+      "success": true,
+      "collision": false,
+      "steps": 135,
+      "reward": 10.94831898624624
+    },
+    {
+      "seed": 20004,
+      "success": false,
+      "collision": true,
+      "steps": 112,
+      "reward": -12.975539764284088
+    },
+    {
+      "seed": 20005,
+      "success": false,
+      "collision": true,
+      "steps": 137,
+      "reward": -8.40823160789477
+    },
+    {
+      "seed": 20006,
+      "success": false,
+      "collision": true,
+      "steps": 138,
+      "reward": -15.631466119655226
+    },
+    {
+      "seed": 20007,
+      "success": false,
+      "collision": true,
+      "steps": 159,
+      "reward": -20.094062169425605
+    },
+    {
+      "seed": 20008,
+      "success": true,
+      "collision": false,
+      "steps": 37,
+      "reward": 8.98380612716883
+    },
+    {
+      "seed": 20009,
+      "success": false,
+      "collision": true,
+      "steps": 147,
+      "reward": -10.387017658502348
+    },
+    {
+      "seed": 20010,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -10.170811334649072
+    },
+    {
+      "seed": 20011,
+      "success": false,
+      "collision": true,
+      "steps": 131,
+      "reward": -17.049285092024768
+    },
+    {
+      "seed": 20012,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -13.975982966765287
+    },
+    {
+      "seed": 20013,
+      "success": false,
+      "collision": true,
+      "steps": 160,
+      "reward": -1.9118353315709395
+    },
+    {
+      "seed": 20014,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": 3.561096156528443
+    },
+    {
+      "seed": 20015,
+      "success": false,
+      "collision": true,
+      "steps": 130,
+      "reward": -14.602466418659096
+    },
+    {
+      "seed": 20016,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -6.276547789548531
+    },
+    {
+      "seed": 20017,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -10.579302696866451
+    },
+    {
+      "seed": 20018,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -4.378389483923104
+    },
+    {
+      "seed": 20019,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -1.0644845823519307
+    },
+    {
+      "seed": 20020,
+      "success": false,
+      "collision": true,
+      "steps": 95,
+      "reward": -12.866404198284794
+    },
+    {
+      "seed": 20021,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -13.952096977138032
+    },
+    {
+      "seed": 20022,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -3.824643680977763
+    },
+    {
+      "seed": 20023,
+      "success": false,
+      "collision": true,
+      "steps": 93,
+      "reward": -17.378719513965503
+    },
+    {
+      "seed": 20024,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -10.889346590652453
+    },
+    {
+      "seed": 20025,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -9.486022285191947
+    },
+    {
+      "seed": 20026,
+      "success": false,
+      "collision": true,
+      "steps": 112,
+      "reward": -4.075680846988475
+    },
+    {
+      "seed": 20027,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -5.304347565654878
+    },
+    {
+      "seed": 20028,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -7.4251367780365305
+    },
+    {
+      "seed": 20029,
+      "success": false,
+      "collision": true,
+      "steps": 86,
+      "reward": -13.662627336585315
+    },
+    {
+      "seed": 20030,
+      "success": false,
+      "collision": true,
+      "steps": 154,
+      "reward": -14.560787213337973
+    },
+    {
+      "seed": 20031,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -16.15234828990694
+    },
+    {
+      "seed": 20032,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": 1.6217296681884237
+    },
+    {
+      "seed": 20033,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -1.3486314322757593
+    },
+    {
+      "seed": 20034,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -12.227518260397616
+    },
+    {
+      "seed": 20035,
+      "success": false,
+      "collision": true,
+      "steps": 147,
+      "reward": -18.271127086935923
+    },
+    {
+      "seed": 20036,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -4.4780631295974285
+    },
+    {
+      "seed": 20037,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -10.703216181866171
+    },
+    {
+      "seed": 20038,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -2.9430294459224298
+    },
+    {
+      "seed": 20039,
+      "success": false,
+      "collision": true,
+      "steps": 130,
+      "reward": -14.592410777959703
+    },
+    {
+      "seed": 20040,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -7.475608735856873
+    },
+    {
+      "seed": 20041,
+      "success": false,
+      "collision": true,
+      "steps": 108,
+      "reward": -10.07441533095757
+    },
+    {
+      "seed": 20042,
+      "success": false,
+      "collision": true,
+      "steps": 150,
+      "reward": -17.29596477754434
+    },
+    {
+      "seed": 20043,
+      "success": false,
+      "collision": true,
+      "steps": 102,
+      "reward": -13.417618372061
+    },
+    {
+      "seed": 20044,
+      "success": false,
+      "collision": true,
+      "steps": 107,
+      "reward": -13.420476045879045
+    },
+    {
+      "seed": 20045,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -10.66238740274141
+    },
+    {
+      "seed": 20046,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -5.65322720189385
+    },
+    {
+      "seed": 20047,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -7.824351178440802
+    },
+    {
+      "seed": 20048,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -5.101045813104545
+    },
+    {
+      "seed": 20049,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -7.346995497907287
+    },
+    {
+      "seed": 20050,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -11.656285296812568
+    },
+    {
+      "seed": 20051,
+      "success": true,
+      "collision": false,
+      "steps": 153,
+      "reward": 15.407752373504394
+    },
+    {
+      "seed": 20052,
+      "success": false,
+      "collision": true,
+      "steps": 138,
+      "reward": -18.09274755157589
+    },
+    {
+      "seed": 20053,
+      "success": true,
+      "collision": false,
+      "steps": 151,
+      "reward": 9.628657071548986
+    },
+    {
+      "seed": 20054,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -15.153522567733926
+    },
+    {
+      "seed": 20055,
+      "success": false,
+      "collision": true,
+      "steps": 135,
+      "reward": -13.654312924586888
+    },
+    {
+      "seed": 20056,
+      "success": true,
+      "collision": false,
+      "steps": 56,
+      "reward": 11.894260238866696
+    },
+    {
+      "seed": 20057,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -7.100772166464172
+    },
+    {
+      "seed": 20058,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -15.96900499582722
+    },
+    {
+      "seed": 20059,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -10.931622402173396
+    },
+    {
+      "seed": 20060,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -13.800034309645795
+    },
+    {
+      "seed": 20061,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -15.513068912055111
+    },
+    {
+      "seed": 20062,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -12.841517020976985
+    },
+    {
+      "seed": 20063,
+      "success": true,
+      "collision": false,
+      "steps": 72,
+      "reward": 10.508839365511854
+    },
+    {
+      "seed": 20064,
+      "success": false,
+      "collision": true,
+      "steps": 148,
+      "reward": -16.081604124361895
+    },
+    {
+      "seed": 20065,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -1.3392343517550072
+    },
+    {
+      "seed": 20066,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -8.992683529370941
+    },
+    {
+      "seed": 20067,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -8.619992050882564
+    },
+    {
+      "seed": 20068,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -4.133993104834687
+    },
+    {
+      "seed": 20069,
+      "success": false,
+      "collision": true,
+      "steps": 110,
+      "reward": -12.454477340212701
+    },
+    {
+      "seed": 20070,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -3.4724794940875476
+    },
+    {
+      "seed": 20071,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -0.3423523940928833
+    },
+    {
+      "seed": 20072,
+      "success": true,
+      "collision": false,
+      "steps": 30,
+      "reward": 11.029038215082426
+    },
+    {
+      "seed": 20073,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -11.088686226635662
+    },
+    {
+      "seed": 20074,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -16.255455132577147
+    },
+    {
+      "seed": 20075,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -8.168173780616044
+    },
+    {
+      "seed": 20076,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -5.335392209770734
+    },
+    {
+      "seed": 20077,
+      "success": true,
+      "collision": false,
+      "steps": 35,
+      "reward": 9.763237935592885
+    },
+    {
+      "seed": 20078,
+      "success": true,
+      "collision": false,
+      "steps": 84,
+      "reward": 8.419294484393088
+    },
+    {
+      "seed": 20079,
+      "success": false,
+      "collision": true,
+      "steps": 152,
+      "reward": -18.7123930441484
+    },
+    {
+      "seed": 20080,
+      "success": true,
+      "collision": false,
+      "steps": 75,
+      "reward": 11.899976254387512
+    },
+    {
+      "seed": 20081,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -10.94649580649799
+    },
+    {
+      "seed": 20082,
+      "success": false,
+      "collision": true,
+      "steps": 153,
+      "reward": -12.795437117279388
+    },
+    {
+      "seed": 20083,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -11.21265058444222
+    },
+    {
+      "seed": 20084,
+      "success": false,
+      "collision": true,
+      "steps": 103,
+      "reward": -15.6836445633126
+    },
+    {
+      "seed": 20085,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -11.016245437006196
+    },
+    {
+      "seed": 20086,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -6.993443647180776
+    },
+    {
+      "seed": 20087,
+      "success": false,
+      "collision": true,
+      "steps": 76,
+      "reward": -9.069635350913767
+    },
+    {
+      "seed": 20088,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -9.965897448597527
+    },
+    {
+      "seed": 20089,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -8.25721253706378
+    },
+    {
+      "seed": 20090,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -11.855721929801032
+    },
+    {
+      "seed": 20091,
+      "success": false,
+      "collision": true,
+      "steps": 131,
+      "reward": -19.64663389748698
+    },
+    {
+      "seed": 20092,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": 1.7787128892715636
+    },
+    {
+      "seed": 20093,
+      "success": false,
+      "collision": true,
+      "steps": 96,
+      "reward": -13.468600123881453
+    },
+    {
+      "seed": 20094,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -12.58640209954908
+    },
+    {
+      "seed": 20095,
+      "success": false,
+      "collision": true,
+      "steps": 87,
+      "reward": -14.303676952367388
+    },
+    {
+      "seed": 20096,
+      "success": false,
+      "collision": true,
+      "steps": 114,
+      "reward": -20.13487128061707
+    },
+    {
+      "seed": 20097,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -7.5009561982057384
+    },
+    {
+      "seed": 20098,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -8.866999377169236
+    },
+    {
+      "seed": 20099,
+      "success": false,
+      "collision": false,
+      "steps": 160,
+      "reward": -7.191421127036524
+    }
+  ]
+}

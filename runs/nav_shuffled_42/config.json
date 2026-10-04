@@ -1,0 +1,22 @@
+{
+  "mode": "shuffled",
+  "steps": 1000000,
+  "seed": 42,
+  "resume": null,
+  "name": null,
+  "eval_only": null,
+  "actual_parameters": 44057,
+  "graph_sha256": "28ab3d79b99db6f51ee74fb4bf1e0aea57179c72171598c937d3379e7a301875",
+  "observation": [
+    "visible",
+    "bearing",
+    "bbox_width",
+    "front_range_normalized"
+  ],
+  "limitations": [
+    "idealized detector observations",
+    "planar kinematics",
+    "no internal obstacles",
+    "single training seed"
+  ]
+}
